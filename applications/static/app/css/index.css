@@ -1,0 +1,1789 @@
+a {
+    text-decoration: none;
+    color: #222222;
+    outline: none;
+}
+
+/*此处待添加默认链接颜色*/
+a:active {
+    color: #aaaaaa;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    display: inline-block
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5) {
+    .border-1px::after, .border-1px::before {
+        -webkit-transform: scaleY(0.7);
+        -webkit-transform-origin: 0 0;
+        transform: scaleY(0.7)
+    }
+
+    .border-1px::after {
+        -webkit-transform-origin: left bottom
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+    .border-1px::after, .border-1px::before {
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5)
+    }
+}
+
+/*定位区域,业务区域布局*/
+.location .wrapper, .business_area .wrapper, .remark-layout .wrapper, .coupon-layout .wrapper {
+    position: relative;
+    height: 51px;
+    line-height: 51px;
+}
+
+/*专车布局*/
+.wrapper-specialCar-hook {
+    margin-top: 1.3rem;
+    position: relative;
+    line-height: 25px;
+    height: 25px;
+    margin-bottom: 28px;
+}
+
+/*专车布局*/
+.wrapper-specialCar-hook:before, .wrapper-specialCar-hook:after {
+    display: block;
+    position: absolute;
+    /*border-bottom:1px solid #ccc;*/
+    left: 0;
+    width: 100%;
+    content: ' '
+}
+
+.gray-line {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.location .wrapper:before,
+.location .wrapper:after,
+.business_area .wrapper:before,
+.business_area .wrapper:after,
+.remark-layout .wrapper:before,
+.remark-layout .wrapper:after,
+.coupon-layout .wrapper:after {
+    display: block;
+    position: absolute;
+    border-top: 1px solid #ccc;
+    left: 0;
+    width: 100%;
+    content: ' '
+}
+
+.location .wrapper:before,
+.business_area .wrapper:before,
+.wrapper-specialCar-hook:before,
+.remark-layout .wrapper:before,
+.coupon-layout .wrapper:before {
+    display: none;
+    top: 0
+}
+
+.location .wrapper:after,
+.business_area .wrapper:after,
+.wrapper-specialCar-hook:after,
+.remark-layout .wrapper:after,
+.coupon-layout .wrapper:after {
+    display: block;
+    bottom: 0
+}
+
+.location .wrapper-from-hook, .location .wrapper-to-hook {
+    height: 45px;
+    line-height: 45px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+	padding-left: 2rem;
+}
+
+/*起点和终点内容*/
+.location .wrapper .txt-from, .location .wrapper .txt-to {
+    display: inline-block;
+    height: 49px;
+    overflow: hidden;
+    vertical-align: top;
+    font-size: 1.4rem;
+    color: #666
+}
+
+.location .wrapper .txt-from-address, .location .wrapper .txt-to-address {
+    display: inline-block;
+    height: 49px;
+    overflow: hidden;
+    vertical-align: top;
+    font-size: 1.4rem;
+    color: #666
+}
+
+.location .wrapper .txt-from-address, .location .wrapper .txt-to-address {
+    display: none;
+}
+
+/*起点和终点提示文字*/
+.location .wrapper .txt-from.default, .location .wrapper .txt-to.default {
+    color: #06b783
+}
+
+/*起点和终点提示文字*/
+.location .wrapper .txt-from-address.default, .location .wrapper .txt-to-address.default {
+    color: #04be02
+}
+
+/*留言内容*/
+.remark-layout .wrapper .txt-remark {
+    display: inline-block;
+    height: 49px;
+    width: 90%;
+    overflow: hidden;
+    vertical-align: top;
+    font-size: 1.4rem;
+    color: #666
+}
+
+/*留言提示文字*/
+.remark-layout .wrapper .txt-remark.default {
+    font-size: 1.4rem;
+    color: #adadad
+}
+
+.remark-layout .wrapper .txt-from .fail-tip, .location .wrapper .txt-to .fail-tip {
+    color: #adadad
+}
+
+/*业务区域布局*/
+.business_type {
+    display: none;
+}
+
+.business_type.on {
+    display: block;
+}
+
+/*物单输入框*/
+.business_area .wrapper .txt-goods-input {
+    display: inline-block;
+    height: 49px;
+    width: 90%;
+    overflow: hidden;
+    vertical-align: center;
+    font-size: 1.4rem;
+    color: #666
+}
+
+/*物单输入框*/
+.txt-goods-input {
+    outline: none;
+    background-color: #FAFAFA;
+}
+
+/*人数数量*/
+.txt-people {
+    font-size: 1.8rem;
+    color: #04be02;
+}
+
+/*优惠券金额*/
+.txt-coupon {
+    font-size: 1.8rem;
+    color: #04be02;
+}
+
+.txt-item-desc {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.txt-people-line {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.txt-item-select {
+    float: right;
+    height: 51px;
+    line-height: 51px;
+    font-size: 1.3rem;
+    color: #adadad;
+}
+
+/*收件人信息--标题*/
+.wrapper-receiver-hook {
+    line-height: 22px;
+    height: 22px;
+}
+
+.receiver-info {
+    color: #222;
+    font-size: 1.4rem;
+}
+
+.i-time:before {
+    content: '\e604';
+    color: #adadad;
+}
+
+.i-from:before {
+    content: '\e60c';
+    color: #41b07b
+}
+
+.i-to:before {
+    content: '\e60c';
+    color: #e37378
+}
+
+.i-arrow-down:before {
+    content: '\e605';
+    color: #06b783;
+}
+
+.i-add-people:before {
+    content: '\e600';
+    color: #666;
+}
+
+.i-receiver-name:before {
+    content: '\e600';
+    color: #666;
+}
+
+.i-receiver-phone:before {
+    content: '\e602';
+    color: #666;
+}
+
+.i-coupon:before {
+    content: '\e609';
+    color: #666;
+}
+
+.i-remark:before {
+    content: '\e603';
+    color: #666;
+}
+
+.i-right-arrow:before {
+    content: '\e60b';
+    color: #adadad;
+}
+
+.i-right-arrow.nodata:before {
+    content: '';
+}
+
+.i-user:before {
+    content: '\e606'
+}
+
+.i-call:before {
+    content: '\e60a';
+    color: #06b783;
+}
+
+.i-history-address:before {
+    content: '\e617';
+    color: #06b783;
+}
+
+.i-location-address:before {
+    content: '\e616';
+    color: #666;
+}
+
+/*向右箭头的外部容器*/
+.txt-item-select-wrapper {
+    float: right;
+    line-height: 51px;
+    height: 51px;
+    padding-left: 0px;
+    padding-right: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*专车,公务车/商务车布局*/
+.car-layout {
+    float: left;
+}
+
+.car-item1, .car-item2 {
+    display: inline-block;
+    text-align: center;
+}
+
+.car-item1 {
+    margin-right: 35px;
+}
+
+/**预估价整体布局*/
+.order-estimated-all-price-layout {
+    text-align: center;
+    margin-top: 12px;
+}
+
+/**点状进度条*/
+.dots-loading {
+    display: inline-block;
+    position: relative;
+    margin: 11px 0;
+    width: 33px;
+    height: 7px;
+    background: url('../images/dots-loading.gif');
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+/** 预估价布局 */
+.order-estimated-price-layout {
+    display: none;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+}
+
+.order-estimated-price-wrapper {
+    text-align: center;
+}
+
+.order-estimated-price-wrapper .money-desc {
+    font-size: 15px;
+    color: #666;
+}
+
+.order-estimated-price-wrapper .money {
+    font-size: 19px;
+    color: #04be02;
+}
+
+/** 物价--预估价布局 */
+.order-estimated-goods-price-layout {
+    display: none;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+}
+
+.order-estimated-goods-price-wrapper {
+    text-align: center;
+}
+
+.order-estimated-goods-price-wrapper .money {
+    font-size: 18px;
+    color: #06b783;
+}
+
+/*预约用车按钮*/
+.order {
+    margin-top: 0.5rem;
+    text-align: center
+}
+
+.order .btn {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #04be02;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.order .btn:active {
+    background-color: #e5e5e5;
+}
+
+.order .btn.disable {
+    background-color: #e5e5e5
+}
+
+.order .btn.disable:active {
+    background-color: #e5e5e5
+}
+
+/*选择时间*/
+.go-time {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 3.2rem;
+    font-size: .86rem;
+    content: ' ';
+}
+
+.go-time span {
+    color: #1a1a1a;
+    margin-left: 0.2rem;
+    white-space: nowrap;
+    line-height: 100%;
+    margin-right: 0.1rem;
+    width: 60px;
+    font-size: 1.6rem;
+    color: #333333;
+}
+
+#wrap {
+    height: auto;
+    min-height: 99%
+}
+
+#main {
+    width: 100%;
+    /*padding-bottom:140px*/
+}
+
+#subMenu {
+    height: 30px
+}
+
+#eta {
+    height: 72px
+}
+
+#rule {
+    min-height: 10px
+}
+
+.content {
+    width: 86%;
+    margin: 0 7%
+}
+
+#btnMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 50px
+}
+
+.user-menu {
+    width: 42px;
+    line-height: 23px;
+    margin-top: 12px;
+    text-align: center;
+    color: #878787;
+    border-right: 1px solid #e5e5e5
+}
+
+.user-menu .i-user {
+    position: relative;
+    top: 3px;
+    font-size: 1.6rem
+}
+
+.i-user:hover {
+    opacity: 0.4;
+}
+
+/**=========================================主页导航栏 及 个人中心菜单===============================================================*/
+/**=========================================主页导航栏 及 个人中心菜单===============================================================*/
+/**=========================================主页导航栏 及 个人中心菜单===============================================================*/
+.navigator {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    color: #878787;
+    font-size: 1.4rem
+}
+
+/**
+头部菜单样式
+*/
+.head-menu {
+    /*整体样式*/
+    position: fixed;
+    margin: 0 auto;
+    max-width: 640px;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    background: #fff;
+    border-bottom: 1px solid #e3e3e3;
+    z-index: 100;
+}
+
+#navigator {
+    margin-left: 50px;
+    margin-right: 20px;
+    height: 50px;
+    overflow: hidden
+}
+
+.tabBox {
+    min-height: 100%;
+}
+
+.tabBox .bd {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+
+}
+
+.tabBox select {
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+}
+
+/*头部菜单样式 ++开始*/
+.tabBox-tit {
+    float: right;
+    position: relative;
+    height: 100%;
+}
+
+.tabBox-tit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.tabBox-tit li {
+    float: left;
+    /*margin: 10px 4%;*/
+    margin: 10px 0px;
+    width: 33.3%;
+    font-size: 1.6rem;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+}
+
+/*.tabBox-tit li.on {
+    color: #06b783;
+    border: 1px solid #06b783;
+}*/
+.tabBox-tit li em {
+    width: 100%;
+    padding: 4px 10px 4px 10px;
+    color: #898989;
+    border: 1px solid #fff;
+    border-radius: 1.2rem;
+}
+
+.tabBox-tit li.on em {
+    color: #04be02;
+    border: 1px solid #04be02;
+}
+
+/*头部菜单样式 ++结束*/
+.page-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.page-menu.visible {
+    left: 0;
+    animation: menuMoveShow .1s;
+    -webkit-animation: menuMoveShow .1s
+}
+
+.page-menu.hidden {
+    left: -100%;
+    animation: menuMoveHide .1s;
+    -webkit-animation: menuMoveHide .1s
+}
+
+.page-menu .l, .page-menu .r {
+    position: absolute;
+    top: 0;
+    height: 100%
+}
+
+.page-menu .l {
+    left: 0;
+    width: 85%;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.page-menu .r {
+    right: 0;
+    width: 15%;
+    background: #000;
+    opacity: 0;
+    animation: menuOpacity2 .1s;
+    -webkit-animation: menuOpacity2 .1s
+}
+
+.page-menu .r.visible {
+    opacity: .5;
+    animation: menuOpacity .1s;
+    -webkit-animation: menuOpacity .1s
+}
+
+.page-menu .item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border: 0;
+    color: #555;
+    background-color: #fff;
+    font-size: 1.4rem
+}
+
+.page-menu .item:active {
+    margin-top: -1px;
+    padding-top: 1px;
+    background-color: #f2f2f2
+}
+
+.page-menu .item a {
+    display: block;
+    line-height: 50px;
+    height: 50px;
+    margin-left: 5%;
+    border-bottom: 1px solid #f2f2f2
+}
+
+/**用户手机号*/
+.page-menu .m_phone a {
+    padding: 10px 0;
+    text-align: center;
+    color: #999;
+    font-size: 1.6rem
+}
+
+.page-menu .m_phone .icon-index {
+    top: 0
+}
+
+.page-menu .m_phone:active {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #fff
+}
+
+/**小图标设置*/
+.page-menu .icon-index {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+    font-size: 1.6rem;
+    color: #aaa
+}
+
+/**小图标--个人头像*/
+.page-menu .m_phone i:before {
+    position: relative;
+    content: "\e606";
+}
+
+/**小图标--我的行程*/
+.page-menu .m_order i:before {
+    position: relative;
+    content: "\e607";
+}
+
+/**小图标--账户充值*/
+.page-menu .m_account i:before {
+    position: relative;
+    content: "\e601";
+}
+
+/**小图标--优惠券*/
+.page-menu .m_coupon i:before {
+    position: relative;
+    content: "\e609";
+}
+
+/**小图标--下载*/
+.page-menu .m_download i:before {
+    position: relative;
+    content: "\e608";
+}
+
+/**小图标--关闭menu的外部区域*/
+.page-menu .closeMenu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 11;
+    padding: 10px;
+    margin-left: -26px
+}
+
+/**小图标--关闭menu*/
+.page-menu .closeMenu i.i-close-menu:after {
+    color: #ea8010;
+    font-size: 36px;
+    content: '\e615'
+}
+
+.wrapper-download-qrcode {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.i-menu-download-qrcode {
+    margin: 0 auto;
+    display: block;
+    width: 110px;
+    height: 110px;
+    background: url('../images/ic_qrcode_app_update.jpg') left center no-repeat;
+    background-size: 110px 110px;
+}
+
+.txt-download-qrcode {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 15px;
+}
+
+/*约车界面=====================================================================--业务区域--选择专车类型----开始*/
+/*约车界面=====================================================================--业务区域--选择专车类型----开始*/
+/*约车界面=====================================================================--业务区域--选择专车类型----开始*/
+.showCar_input {
+    width: 0;
+    height: 0
+}
+
+.showCarBox {
+    display: -webkit-box;
+}
+
+.ucar_u_l_list li {
+    width: 100%;
+    margin-top: -1px;
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    color: #343434;
+    background-color: #ffffff
+}
+
+.ucar_u_l_list label {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    float: none !important;
+    position: relative
+}
+
+.ucar_u_l_list .radiobox {
+    display: block;
+    padding: 6px 0;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    margin-left: -1px;
+    color: #666;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    /*border-left:1px solid rgba(0,0,0,.1);*/
+}
+
+.ucar_u_l_list .radiobox:last-child {
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    /*border-right:1px solid rgba(0,0,0,.1);*/
+    margin-right: -3px;
+}
+
+.gw_carimg.showCar_span.type1 {
+    background-image: url(../images/ic_gongwu.png);
+    background-size: 100%;
+}
+
+.gw_carimg.showCar_span.type2 {
+    background-image: url(../images/ic_shangwu.png);
+    background-size: 100%;
+}
+
+.gw_carimg {
+    display: inline-block;
+    width: 65px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: 65px 65px;
+    background-position: 0 0
+}
+
+/**未选中状态*/
+.radiobox.cartype .radioicon:before {
+    content: '\e613';
+    font-size: 18px;
+    color: #adadad;
+}
+
+/**选中状态*/
+.radiobox.cartype.on .radioicon:before {
+    content: '\e614';
+    font-size: 18px;
+    color: #06b783;
+}
+
+/*公务车,商务车 描述信息*/
+.showCar_p {
+    margin-top: 7.5px;
+    font-size: 1.5rem;
+}
+
+/*约车界面=====================================================================--业务区域--选择专车类型----结束*/
+/*约车界面=====================================================================--业务区域--选择专车类型----结束*/
+/*约车界面=====================================================================--业务区域--选择专车类型----结束*/
+
+/*约车界面=====================================================================--底部连接--立即叫车,联系客服*/
+/*约车界面=====================================================================--底部连接--立即叫车,联系客服*/
+/*约车界面=====================================================================--底部连接--立即叫车,联系客服*/
+.go-footer {
+
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.go-links {
+    position: relative;
+    white-space: nowrap;
+    /*margin: 1.2rem auto 0;*/
+    text-align: center;
+}
+
+.go-links li {
+    overflow: hidden;
+    width: 8rem;
+    display: inline-block;
+    white-space: nowrap;
+    color: #666;
+}
+
+.go-links li:first-child {
+    position: relative;
+    margin-right: .8rem;
+    text-align: right;
+}
+
+.go-links li:last-child {
+    margin-left: .8rem;
+    text-align: left;
+}
+
+.go-links li:first-child span {
+    color: #06b783;
+}
+
+.go-links li:first-child span:active {
+    color: #aaaaaa;
+}
+
+.go-links .text-contact {
+    color: #666;
+}
+
+.go-links li span {
+    display: block;
+}
+
+.go-links li.on span {
+    color: #1a1a1a
+}
+
+@-webkit-keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-webkit-keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@-webkit-keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-webkit-keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-o-keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-ms-keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@keyframes menuMoveShow {
+    0% {
+        left: -20%
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: 0
+    }
+}
+
+@-moz-keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@-webkit-keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@-o-keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@-ms-keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@keyframes menuMoveHide {
+    0% {
+        left: 0
+    }
+    50% {
+        left: -10%
+    }
+    100% {
+        left: -100%
+    }
+}
+
+@-moz-keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-o-keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-ms-keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@keyframes menuOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-moz-keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-o-keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-ms-keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes menuOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+/*约车界面=====================================================================--广告区域--adv广告区域--开始*/
+/*约车界面=====================================================================--广告区域--adv广告区域--开始*/
+/*约车界面=====================================================================--广告区域--adv广告区域--开始*/
+.adv {
+    position: fixed;
+    top: -100%;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.adv.visible {
+    top: 0;
+    animation: advMoveShow .1s;
+    -webkit-animation: advMoveShow .1s
+}
+
+.adv.hidden {
+    top: -100%;
+    animation: advMoveHide .1s;
+    -webkit-animation: advMoveHide .1s
+}
+
+.adv .closeMenu {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 auto;
+    left: 50%;
+    z-index: 601;
+    margin-left: -17px;
+}
+
+.adv .closeMenu i.i-close-adv:before {
+    color: #ED9121;
+    font-size: 36px;
+    content: '\e615'
+}
+
+.adv-gray-bg {
+    position: absolute;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5
+}
+
+.adv-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 600;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden
+}
+
+.adv-img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px
+}
+
+@-webkit-keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-webkit-keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@-webkit-keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-webkit-keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-o-keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-ms-keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@keyframes advMoveShow {
+    0% {
+        top: -20%
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-moz-keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@-webkit-keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@-o-keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@-ms-keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@keyframes advMoveHide {
+    0% {
+        top: 0
+    }
+    50% {
+        top: -10%
+    }
+    100% {
+        top: -100%
+    }
+}
+
+@-moz-keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-o-keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-ms-keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@keyframes advOpacity {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .1
+    }
+    70% {
+        opacity: .2
+    }
+    90% {
+        opacity: .3
+    }
+    100% {
+        opacity: .4
+    }
+}
+
+@-moz-keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-o-keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-ms-keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes advOpacity2 {
+    0% {
+        opacity: .4
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+/*约车界面=====================================================================--广告区域--adv广告区域--结束*/
+/*约车界面=====================================================================--广告区域--adv广告区域--结束*/
+/*约车界面=====================================================================--广告区域--adv广告区域--结束*/
+#footer-new {
+    position: relative;
+    height: 130px;
+    margin-top: 6px;
+    clear: both;
+}
+.banner-new {
+    width: 270px;
+    height: 120px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.ui-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.ui-slider-group {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    -webkit-transform: translateZ(0)
+}
+
+.ui-slider-item {
+    text-align: center;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    -webkit-box-sizing: border-box
+}
+
+.ui-slider-item > a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden
+}
+
+.ui-slider-item > p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    padding: 6px 0;
+    text-indent: 10px
+}
+
+.ui-slider-dots {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    padding: 0 6px;
+    text-align: center
+}
+
+.ui-slider-dots > b {
+    display: inline-block;
+    margin: 0 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, .3)
+}
+
+.ui-slider-dots .ui-state-active {
+    background: #fff
+}
+
+.ui-slider-pre, .ui-slider-next {
+    position: absolute;
+    z-index: 99;
+    width: 50px;
+    height: 60px;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+    outline: 0
+}
+
+.ui-slider-pre:after, .ui-slider-next:after {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3) url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.46/slider/ui-slider-arrow.png) no-repeat;
+    background-size: 35px 15px;
+    outline: 0;
+    content: '\0020';
+    display: inline-block;
+    background-position: 3px center;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 0 20px 20px 0
+}
+
+.ui-slider-next {
+    right: 0;
+    left: auto
+}
+
+.ui-slider-next:after {
+    background-position: -18px center;
+    right: 0;
+    left: auto;
+    border-radius: 20px 0 0 20px
+}
+
+@media all and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .ui-slider-item > p {
+        font-size: 16px;
+        padding: .5em 0;
+        text-indent: .8em
+    }
+
+    .ui-slider-dots {
+        bottom: .5em;
+        padding-right: .5em
+    }
+
+    .ui-slider-dots b {
+        margin-right: .5em;
+        width: .5em;
+        height: .5em;
+        border-radius: .25em
+    }
+}
+
+
+.location{ position: relative;}
+.location img{ position: absolute;top:2.7rem;left:-1rem;width:2.4rem;z-index:1;background-color: #fafafa;padding-left:2px;}

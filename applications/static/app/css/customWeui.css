@@ -1,0 +1,81 @@
+/**自定义toast的样式----背景*/
+#toast .weui_mask_transparent{
+    background: rgba(0,0,0, 0.6);
+}
+/**自定义toast的样式----布局*/
+#toast .weui_toast {
+    position: fixed;
+    z-index: 50000;
+    width: 180px;
+    min-height: 7.6em;
+    padding-top: 18px;
+    top: 180px;
+    left: 50%;
+    margin-left: -90px;
+    /*background: rgba(40,40,40,.75);*/
+    background: rgba(255,255,255, 125);
+    text-align: center;
+    border-radius: 5px;
+    color: #666;
+}
+/**自定义toast的样式----内容*/
+#toast .weui_toast_content {
+    font-size: 14px;
+    margin-top: 15px;
+}
+/**toast图标*/
+#toast .weui_toast .weui_icon_msg:before {
+    font-size: 80px
+}
+/**对话框----中间的文本消息*/
+.weui_dialog_confirm .weui_dialog .weui_dialog_bd {
+    margin-top: 10px;
+    text-align: center;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+/**对话框----标题title*/
+.weui_dialog_confirm .weui_dialog .weui_dialog_hd .weui_dialog_title {
+    margin-bottom: 12px;
+}
+/*自定义的 确认订单信息的对话框*/
+.layermcont-confirm {
+	text-align:left;
+	padding-left: 15px;
+}
+/*对话框内,每行的间距*/
+.layermcont-confirm p {
+	margin-bottom: 8px;
+    -o-text-overflow: ellipsis;/*兼容opera*/
+	text-overflow: ellipsis;/*这就是省略号*/
+    overflow: hidden;/*设置超过的隐藏*/
+	white-space: nowrap;/*设置不折行*/
+}
+/*对话框内,每个单项的标题*/
+.layermcont-confirm .layermcont-confirm-name{
+	margin-right: 6px;
+	font-weight: 500;
+    color: #222;
+    font-size: 16px;
+}
+/*对话框内,每个单项的value*/
+.layermcont-confirm .layermcont-confirm-value{
+	font-weight: 300;
+    color: #666;
+    font-size: 15px;
+}
+/**加载中的进度条*/
+#loadingToast .weui_toast{
+    position: fixed;
+    z-index: 50000;
+    width: 120px;
+    min-height: 100px;
+    padding-top: 18px;
+    top: 180px;
+    left: 50%;
+    margin-left: -60px;
+    background: rgba(0,0,0,0.6);
+    /*background: rgba(255,255,255, 125);*/
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+}

@@ -1,0 +1,232 @@
+﻿.songvico {
+	width:20px;
+	height:20px;
+	z-index:1;
+	margin-top:6px;
+	border-radius:50%;
+	background:#FFF;
+	border:1px solid #ccc;
+	-webkit-box-sizing:border-box;
+	-webkit-transition:all .3s ease-in-out;
+	display:none
+}
+.pay-way .songvico {
+	display:block;float:left;
+}
+.pay-way ul{ width:100%;}
+.pay-way .selected .green {
+	background:#04BE02;
+	border-color:#04BE02
+}
+.pay-way .selected .songvico {
+	background-image:url(../images/vote-check.png);
+	-webkit-background-size:20px 20px;
+	background-size:20px 20px
+}
+.pay-way{width:100%;}
+.pay-way li{ width:50%; float:left;}
+
+.pay-way-explain div{font-size:15px; float:left;}
+
+.fixednumMask {
+	position:fixed;
+	width:100%;
+	opacity:0;
+	top:0px;
+	bottom:0px;
+	background-color:#000;
+	display:none;
+	z-index:999;
+}
+.fixednumMain {
+	position:fixed;
+	bottom:-410px;
+	left:auto;
+	z-index:1199;
+	background:#F0F0F0;
+	width:100%;
+	display:none;
+}
+.fixednumMain .tipBanner {
+	height:42px;
+	width:100%;
+	background:#F0F0F0;
+	border-top:1px solid #cacaca;
+	font-size:16px;
+}
+.fixednumMain .tipBanner span.title,.fixednumMain .priceBanner span.title {
+	line-height:42px;
+	float:left;
+	text-indent:10px;
+	min-width:65px
+}
+.fixednumMain .tipBanner .last,.fixednumMain .priceBanner .editTxt {
+	float:left;
+	width:60%;
+	height:30px;
+	line-height:30px;
+	margin:6px 0;
+	color:#04BE02;
+	text-indent:4px;
+	margin-left:15px;
+	overflow:hidden;
+	font-size:20px;
+	font-family:"Helvetica neue",Verdana,Geneva,sans-serif;
+}
+.fixednumMain .tipBanner .close {
+	float:right;
+	width:42px;
+	height:42px;
+	background-image:url(../images/close2.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:28px;
+}
+.fixednumMain .tipBanner .finish {
+	float:right;
+	width:42px;
+	height:42px;
+	background-size:30px;
+	line-height:40px;
+	font-size:16px;
+	color:#007aff;
+}
+.fixednumMain .priceBanner {
+	background:#fff;
+	height:42px;
+	line-height:42px;
+	font-size:16px;
+	width:100%;
+	position:relative;
+}
+.fixednumMain .priceBanner .editTxt .hover {
+	border-right:2px solid #04BE02;
+}
+.fixednumMain .priceBanner .tips {
+	color:#999;
+	font-size:14px;
+	margin-right:10px;
+	overflow:hidden;
+	height:42px;
+	position:absolute;
+	right:0;
+	top:0
+}
+.fixednumMain .priceBanner .tips .clearPrice {
+	width:20px;
+	height:42px;
+	background-image:url(../images/clearPrice.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:16px;
+}
+.fixednumMain .btnBanner {
+	margin:0 auto;
+	width:96%;
+	padding:10px 0px;
+	display:table;
+}
+.fixednumMain .btnBanner .confirmBtn,.fixednumMain .btnBanner .cancelBtn {
+	background:#04BE02;
+	padding:2.5% 0;
+	border-radius:4px;
+	width:66%;
+	text-align:center;
+	font-size:18px;
+	color:#fff;
+	border:none;
+	float:left;
+	height:24px;
+	line-height:24px;
+}
+.pricefashi {
+	float:left;
+	width:70%;
+	height:30px;
+	line-height:30px;
+	margin:6px 0;
+	color:#7596D9;
+	text-indent:4px;
+	overflow:hidden;
+	font-size:20px;
+	margin-left:15px;
+	font-family:"Helvetica neue",Verdana,Geneva,sans-serif;
+}
+.fixednumMain .btnBanner .confirmBtn,.fixednumMain .btnBanner .cancelBtn {
+	width:46%;
+	margin:0 2%;
+}
+.fixednumMain .btnBanner .fixedPrice,.fixednumMain .btnBanner .changePrice {
+	background:#01B7F0;
+	width:32%;
+	float:left;
+	margin-right:2%;
+	font-size:14px;
+	height:24px;
+	line-height:24px;
+}
+.fixednumMain .btnBanner .confirmBtn:only-child {
+	padding:10px 0;
+	width:100%;
+}
+.fixednumMain .agreeBanner {
+	margin:0 auto;
+	width:96%;
+	padding-bottom:8px;
+	font-size:12px;
+	text-align:right;
+	color:#878787;
+	display:table;
+}
+.fixednumMain .numkey {
+	width:100%;
+	background:#fff;
+	display:table;
+}
+.fixednumMain .numkey ul {
+	padding:0;
+	margin:0;
+}
+.fixednumMain .numkey ul,.fixednumMain .numkey li {
+	text-decoration:none;
+	list-style:none;
+	vertical-align:middle;
+}
+.fixednumMain .numkey ul li {
+	width:33.1%;
+	border-bottom:1px solid #b3b3b3;
+	border-right:1px solid #b3b3b3;
+	height:50px;
+	float:left;
+	font-size:28px;
+	font-family:"Helvetica neue",Verdana,Geneva,sans-serif;
+	text-align:center;
+	background:#fff;
+}
+.fixednumMain .numkey ul li:nth-child(3n) {
+	border-right:none;
+}
+.fixednumMain .numkey ul li.delete {
+	background-image:url(../images/backspace.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:30px;
+	background-color:#D1D5DA;
+}
+.fixednumMain .numkey ul li.othernum {
+	background-color:#D1D5DA;
+	line-height:50px;
+}
+.fixednumMain .numkey ul li div {
+	color:#000;
+}
+.fixednumMain .numkey ul li span {
+	position:relative;
+	font-size:12px;
+	top:-18px;
+	color:#000;
+}
+.cancelBtn {
+	background:#cccccc !important;
+	color:#fff !important;
+}

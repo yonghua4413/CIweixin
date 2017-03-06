@@ -1,0 +1,211 @@
+.suggest {
+	position:fixed;
+	top:0;
+	width:100%;
+	min-height:100%;
+	z-index:20;
+	background-color:#fafafa;
+	transition:all .2s ease-out;
+	-webkit-transition:all .2s ease-out
+}
+.suggest.visible {
+	transform:translateX(0) translateZ(0);
+	-webkit-transform:translateX(0) translateZ(0)
+}
+.suggest.hidden {
+	transform:translateX(100%) translateZ(0);
+	-webkit-transform:translateX(100%) translateZ(0)
+}
+.suggest .option {
+	z-index:20;
+	height:50px;
+	line-height:50px;
+	position:relative;
+	background-color:#fafafa;
+	font-size:1.5rem
+}
+.suggest .option:before,.suggest .option:after {
+	display:block;
+	position:absolute;
+	border-top:1px solid #e5e5e5;
+	left:0;
+	width:100%;
+	content:' '
+}
+.suggest .option:before {
+	display:none;
+	top:0
+}
+.suggest .option:after {
+	display:block;
+	bottom:0
+}
+.suggest .option .cancel {
+	float:right;
+	margin-right:16px;
+	color:#fa8919
+}
+.suggest .option input {
+	width:100%;
+	line-height:18px;
+	outline:0;
+	opacity:.98;
+	background-color:#fafafa;
+	color:#666
+}
+.suggest .option input::-webkit-input-placeholder {
+	color:#ccc
+}
+.suggest .option .city-select {
+	display:inline-block;
+	position:absolute;
+	padding:0 4px 0 16px;
+
+	vertical-align:top
+}
+.suggest .option .city-select .cityname {
+	vertical-align:top
+}
+/**小图标----下拉箭头*/
+.suggest .option .city-select .i-arrow-select-down:before {
+	content: '\e605';
+	color: #adadad;
+}
+.suggest .option .city-select .city-input {
+	padding:16px 0
+}
+.suggest .option .address-select {
+	display:inline-block;
+	position:absolute;
+	right:50px;
+	height: 50px;
+	line-height:50px;
+	/*padding-top: 16px;*/
+	/*margin-top:16px;*/
+	padding-left:10px;
+	overflow:hidden;
+	transition:all .1s ease-out;
+	-webkit-transition:all .1s ease-out;
+	vertical-align:top;
+	border-left:1px solid #e5e5e5
+}
+.suggest .option .address-select .address-input[type=text] {
+	border-radius:0
+}
+.suggest .pos-wrapper {
+	position:absolute;
+	width:100%;
+	top:250px;
+	bottom:0
+}
+.suggest .pos-wrapper li {
+	padding-left:8px;
+	height:60px;
+	/*border-top:1px solid #e5e5e5;*/
+	border-bottom:1px solid #e5e5e5;
+}
+.suggest .pos-wrapper li:active {
+	background-color:#f0f0f0
+}
+/**定位小图标*/
+.suggest .pos-wrapper li .poi-item-icon {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 4%;
+	line-height: 60px;
+	height: 60px;
+}
+/**定位的详细信息*/
+.suggest .pos-wrapper li .poi-item {
+	display: inline-block;
+	float: right;
+	margin-left: 4px;
+	width: 94%;
+}
+.suggest .pos-wrapper li .name {
+	padding-top:22px;
+	display:block;
+	margin-bottom:6px;
+	font-size:1.6rem;
+	color:#333;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.suggest .pos-wrapper li .address {
+	display:block;
+	padding-bottom:13px;
+	font-size:1.2rem;
+	color:#adadad;
+	position:relative;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*.suggest .pos-wrapper li .address:before,.suggest .pos-wrapper li .address:after {
+	display:block;
+	position:absolute;
+	border-top:1px solid #e5e5e5;
+	left:0;
+	width:100%;
+	content:' '
+}
+.suggest .pos-wrapper li .address:before {
+	display:none;
+	top:0
+}
+.suggest .pos-wrapper li .address:after {
+	display:block;
+	bottom:0
+}*/
+.suggest .pos-wrapper li.has-address .name {
+	padding-top:13px
+}
+.suggest .pos-wrapper li .name {
+	padding-top:13px
+}
+
+.suggest .pos-wrapper .poi-fail {
+	text-align:center;
+	padding:20px;
+	color:#adadad
+}
+.suggest .pos-wrapper .poi-fail .title {
+	font-size:1.6rem;
+	margin-bottom:8px
+}
+.suggest .pos-wrapper .poi-fail .desc {
+	font-size:1.2rem
+}
+.suggest .pos-wrapper .tip-loading {
+	padding-top:8px;
+	font-size:1.4rem
+}
+.suggest .pos-wrapper .no-click {
+	color:#ccc
+}
+.suggest .pos-wrapper .no-click:after {
+	display:none
+}
+.suggest .pos-wrapper .no-click:active {
+	background-color:#fafafa
+}
+.suggest .pos-wrapper .no-result {
+	padding-top:50px;
+	margin-left:-16px;
+	text-align:center;
+	font-size:1.4rem
+}
+.suggest .pos-wrapper .loading {
+	display:inline-block;
+	position:relative;
+	top:2px;
+	width:16px;
+	height:16px;
+	margin-right:10px;
+	opacity:.2;
+	background-image:url('../images/ajax-loader.gif');
+	background-repeat:no-repeat;
+	background-size:contain
+}

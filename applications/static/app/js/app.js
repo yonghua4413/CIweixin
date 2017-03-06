@@ -1,0 +1,32 @@
+require.config({
+    baseUrl: staticUrl+'/app/js',
+    paths: {
+         bscroll: 'bscroll',
+        fastclick: 'fastclick',
+        handlebars: 'handlebars',
+        dialogUtils: 'dialogUtils',
+        indexOrderUtils: 'indexOrderUtils',
+        commonutils: 'commonutils',
+        adv: 'adv',
+        city: 'city',
+        couponlist: 'couponlist',
+        evalution: 'evalution',
+        indexCommitOrder: 'indexCommitOrder',
+        indexGeo: 'indexGeo',
+        indexTab: 'indexTab',
+        lineprice: 'lineprice',
+        menu: 'menu',
+        orderfee: 'orderfee',
+        orderitem: 'orderitem',
+        orderlist: 'orderlist',
+        recharge: 'recharge',
+        register: 'register',
+        selectCoupon: 'selectCoupon',
+        selectPeople: 'selectPeople',
+        store: 'store',
+        suggest: 'suggest',
+        usercenter: 'usercenter',
+        utils: 'utils',
+        wx: ['http://res.wx.qq.com/open/js/jweixin-1.0.0'] ////支持cdn引入
+    }
+});

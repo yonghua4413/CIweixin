@@ -1,0 +1,125 @@
+body,html {
+	font-size:62.5%;
+	height:100%;
+	padding:0;
+	margin:0;
+	background-color:#fafafa;
+	font-family:'PingFang SC',STHeitiSC-Light,Helvetica-Light,arial,sans-serif,'Droid Sans Fallback';
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+@font-face {
+  font-family: 'icon-index';
+  src: url('../font/font_1471869329_0393064.eot'); /* IE9*/
+  src: url('../font/font_1471869329_0393064.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/font_1471869329_0393064.woff') format('woff'), /* chrome、firefox */
+  url('../font/font_1471869329_0393064.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/font_1471869329_0393064.svg#icon-index') format('svg'); /* iOS 4.1- */
+}
+
+
+/**引用字体图标*/
+.icon-index {
+    font-family: "icon-index" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*标题栏*/
+.title-bar {
+	height: 43px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.title-bar-2 {
+	height: 43px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.title-bar-2-wrapper .title-bar-2-center-title{
+	display: inline-block;
+	line-height: 43px;
+	height: 43px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+}
+.title-bar-2-wrapper {
+	text-align: center;
+	display: block;
+ 	margin-bottom: 4px;
+	height:43px;
+	line-height: 43px;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom:1px solid #e5e5e5;
+}
+/**头部----整体布局*/
+.title-bar-wrapper {
+	text-align: center;
+	display: block;
+ 	margin-bottom: 4px;
+	height:43px;
+	line-height: 43px;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom:1px solid #e5e5e5;
+}
+/**头部----左侧----返回按钮*/
+.title-bar-wrapper .i-back {
+	position: relative;
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+	float: left;
+	width: 35px;
+	height: 35px;
+	background: url('../images/ic_back_normal.png') left center no-repeat;
+	background-size: 35px 35px;
+}
+.title-bar-wrapper .i-back:hover{
+	background: url('../images/ic_back_pressed.png') left center no-repeat;
+	width: 35px;
+	height: 35px;
+	background-size: 35px 35px;
+}
+/**头部----左侧----返回按钮信息*/
+.title-bar-wrapper .title-bar-left {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    height: 43px;
+}
+/**头部----中间----h2标题*/
+.title-bar-wrapper .title-bar-center-title{
+	width: 100%;
+	margin:0 auto;
+	line-height: 43px;
+	height: 43px;
+	text-align: center;
+	font-size: 18px;
+}
+/**头部----右侧----文本信息*/
+.title-bar-wrapper .title-bar-right {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 38px;
+	font-weight: bold;
+	font-size: 13px;
+    padding-right: 0;
+}
+/*正在加载动画*/
+#ll-load-more {
+	margin: 0 auto;
+	width: 80px;
+	height: 80px;
+    background-image: url(../images/loading_more.gif);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: center center
+}

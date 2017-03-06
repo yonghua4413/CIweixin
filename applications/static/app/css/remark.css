@@ -1,0 +1,130 @@
+/*给司机留言界面*/
+.remark {
+	position:fixed;
+	top:0;
+	width:100%;
+	min-height:100%;
+	z-index:20;
+	/*background-color:#fafafa;*/
+	background-color: #ffffff;
+	transition:all .2s ease-out;
+	-webkit-transition:all .2s ease-out
+}
+.remark.visible {
+	transform:translateX(0) translateZ(0);
+	-webkit-transform:translateX(0) translateZ(0)
+}
+.remark.hidden {
+	transform:translateX(100%) translateZ(0);
+	-webkit-transform:translateX(100%) translateZ(0)
+}
+/*输入框*/
+.remark-input-wrapper {
+	width:97.5%;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-width: thin;
+	border-style: solid;
+	border-color: #ddd;
+	margin-top: 10px;
+	position: relative;
+}
+.remark-input {
+	width: 97.5%;
+	background-color: #ffffff;
+	outline:none;
+	border:0px;
+	overflow:hidden;
+	font-size: 14px;
+	text-align: left;
+	min-height: 13rem;
+	max-height: 18rem;
+	padding-top: 0.8rem;
+	padding-bottom: 20px;
+	padding-left: 0.6rem;
+}
+/*常用留言列表*/
+.remark ul {
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	margin-top:3.5em;
+	float:none;
+	overflow:hidden;
+	zoom:1;
+	width: 100%;
+	text-align:center;
+}
+.remark li {
+	border-color:#ddd;
+	border-style:solid;
+	border-width: thin;
+	font-size: 14px;
+	margin-top: 0.7rem;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	float:left;
+	display:inline;
+	width:31.5%;
+	text-align: center;
+}
+.remark li :active{
+	background-color: #dddddd;
+	color:#aa6902;
+}
+.remark li :hover{
+	background-color: #dddddd;
+	color:#aa6902;
+}
+.remark li span {
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	text-align: center;
+	padding: auto;
+	display:block;
+	width:100%;
+	margin:0 auto;
+	color:#222222;
+}
+/*字数统计*/
+.remark-content-count-wrapper {
+	margin-top: -18px;
+	position: relative;
+	display: inline-block;
+	color:#06b783;
+	float:right;
+	font-size: 1.4rem;
+	/*margin-bottom: 5px;*/
+	margin-right: 5px;
+}
+.remark-count-hint {
+	color:#808080;
+}
+/*提交按钮*/
+.btn-commit {
+	margin-top: 20px;
+	display: block;
+	width:92%;
+	margin-left: 4%;
+	margin-right: 4%;
+ 	line-height:48px;
+	height:48px;
+	color:#fff;
+	/*background-color:#fa8919;*/
+	background-color: #04be02;
+	font-size:1.6rem;
+	border-radius:4px;
+	text-align: center;
+}
+.btn-commit:active {
+	background-color:#e5e5e5;
+}
+.btn-commit.disable {
+	background-color:#e5e5e5
+}
+.btn-commit.disable:active {
+	background-color:#e5e5e5
+}
+.btn-commit:hover {
+	background-color:#eae0e0;
+}
+

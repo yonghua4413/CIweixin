@@ -1,0 +1,183 @@
+
+/*优惠券列表界面*/
+.page-couponlist {
+	position:fixed;
+	top:0;
+	width:100%;
+	min-height: 100%;
+	z-index:20;
+	/*background-color:#fafafa;*/
+	background-color: #ffffff;
+	transition:all .2s ease-out;
+	-webkit-transition:all .2s ease-out
+}
+.page-couponlist.visible {
+	transform:translateX(0) translateZ(0);
+	-webkit-transform:translateX(0) translateZ(0)
+}
+.page-couponlist.hidden {
+	transform:translateX(100%) translateZ(0);
+	-webkit-transform:translateX(100%) translateZ(0)
+}
+/**将标题栏固定*/
+.page-couponlist .title-bar-wrapper {
+    z-index: 20;
+    position: relative;
+}
+.coupon-list-wrapper {
+    position: absolute;
+    top: 43px;
+    bottom: 10px;
+    width: 100%;
+}
+/*优惠券列表*/
+.couponlist-hook {
+
+}
+/*加载更多*/
+.page-couponlist .load-more {
+    line-height: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #999;
+}
+
+/*正在加载动画*/
+.page-couponlist .load-more em {
+    line-height: 50px;
+    padding: 10px;
+    margin-right: 5px;
+    opacity: .66;
+    background-image: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center
+}
+
+/*没有订单数据*/
+.page-couponlist .nodata {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-couponlist .nodata .desc {
+    display: block;
+    line-height: 1.5em;
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.page-couponlist .i-app-logo:before {
+   content: '\e60d';
+    color: #d6d6d6;
+    font-size: 45px;
+}
+/*优惠券单项*/
+.coupon-item {
+    display: block;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    background-image: url(../images/bg_coupon_round.png);
+    background-size: 100% 90px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #e3e3e3;
+}
+.coupon-item-selected {
+    border:2px solid white;
+    background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0 !important; /*实现FF背景透明，文字不透明*/
+}
+/*选择的checkbox*/
+.i-select-checkbox:before {
+    content: '\e613';
+    font-size: 26px;
+    color: #adadad;
+    margin-right: 4px;
+}
+.coupon-item.on .i-select-checkbox:before {
+    content: '\e614';
+    font-size: 26px;
+    color: #06b783;
+     margin-right: 4px;
+}
+
+/*优惠券金额*/
+.coupon-item .coupon-money {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    height: auto;
+    color: #06b783;
+    font-size: 22px;
+    text-align: center;
+}
+
+/*优惠券内容*/
+.coupon-item .coupon-desc {
+    /*position: relative;*/
+    display: inline-block;
+    height: auto;
+    line-height: 25px;
+    padding-top: 0;
+    width: 48%;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.coupon-name{
+    font-size: 15px;
+    display: inline-block;
+    position: static;
+    bottom: 8px;
+}
+
+.coupon-expiretime{
+    font-size: 12px;
+    display: inline-block;
+    position: static;
+    top:2px;
+}
+
+/*优惠券状态*/
+.coupon-item .coupon-status {
+    width: 20%;
+    display: inline-block;
+    color: #06b783;
+    font-size: 16px;
+}
+
+
+
+/*优惠券详情界面*/
+.page-coupondetail {
+	position:fixed;
+	top:0;
+	left:-100%;
+	z-index:30;
+	width:100%;
+	height:100%;
+	overflow:hidden
+}
+.page-coupondetail.visible {
+	left:0;
+	animation:menuMoveShow .1s;
+	-webkit-animation:menuMoveShow .1s
+}
+.page-coupondetail.hidden {
+	left:-100%;
+	animation:menuMoveHide .1s;
+	-webkit-animation:menuMoveHide .1s
+}
+/*优惠券详情内容*/
+.coupondetail-content {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 25px;
+    font-size: 15px;
+}
